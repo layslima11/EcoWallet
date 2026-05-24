@@ -17,76 +17,105 @@
 
     <children>
 
-        <Label layoutX="30.0"
-               layoutY="20.0"
-               text="EcoWallet" />
+       <Label layoutX="30.0"
+       layoutY="20.0"
+       style="-fx-font-size: 24px; -fx-font-weight: bold;"
+       text="EcoWallet" />
 
-        <TextField fx:id="campoDescricao"
-                   layoutX="30.0"
-                   layoutY="70.0"
-                   prefWidth="200.0"
-                   promptText="Descrição" />
+<Label layoutX="30.0"
+       layoutY="60.0"
+       text="Descrição" />
 
-        <TextField fx:id="campoValor"
-                   layoutX="250.0"
-                   layoutY="70.0"
-                   prefWidth="152.0"
-                   promptText="Valor" />
+<Label layoutX="250.0"
+       layoutY="60.0"
+       text="Valor" />
 
-        <ComboBox fx:id="comboCategoria"
-                  layoutX="30.0"
-                  layoutY="70.0"
-                  prefWidth="150.0"
-                  promptText="Categoria" />
+<Label layoutX="390.0"
+       layoutY="60.0"
+       text="Tipo" />
 
-        <DatePicker fx:id="campoData"
-                    layoutX="30.0"
-                    layoutY="70.0"
-                    prefWidth="150.0" />
+<Label layoutX="530.0"
+       layoutY="60.0"
+       text="Categoria" />
 
-        <Button layoutX="30.0"
-                layoutY="120.0"
-                mnemonicParsing="false"
-                text="Adicionar Receita" 
-                onAction="#adicionarReceita"/>
+<Label layoutX="690.0"
+       layoutY="60.0"
+       text="Data" />
 
-        <Button layoutX="200.0"
-                layoutY="120.0"
-                mnemonicParsing="false"
-                text="Adicionar Despesa" 
-                onAction="#adicionarDespesa"/>
-                
-        <Label fx:id="labelSaldo"
-               layoutX="600.0"
-               layoutY="125.0"
-               text="Saldo = R$ 0,00" />
+<TextField fx:id="campoDescricao"
+           layoutX="30.0"
+           layoutY="85.0"
+           prefWidth="180.0" />
 
-        <TableView fx:id="TableTransacoes"
-                   layoutX="30.0"
-                   layoutY="180.0"
-                   prefHeight="350.0"
-                   prefWidth="740.0">
+<TextField fx:id="campoValor"
+           layoutX="230.0"
+           layoutY="85.0"
+           prefWidth="120.0" />
 
-            <columns>
+<ComboBox fx:id="comboTipo"
+          layoutX="370.0"
+          layoutY="85.0"
+          prefWidth="140.0" />
 
-                <TableColumn prefWidth="200.0"
-                             text="Descrição" />
+<ComboBox fx:id="comboCategoria"
+          layoutX="530.0"
+          layoutY="85.0"
+          prefWidth="140.0" />
 
-                <TableColumn prefWidth="120.0"
-                             text="Valor" />
+<DatePicker fx:id="campoData"
+            layoutX="690.0"
+            layoutY="85.0"
+            prefWidth="100.0" />
 
-                <TableColumn prefWidth="150.0"
-                             text="Categoria" />
+<Button layoutX="30.0"
+        layoutY="140.0"
+        mnemonicParsing="false"
+        text="Adicionar Receita"
+        onAction="#adicionarReceita"/>
 
-                <TableColumn prefWidth="150.0"
-                             text="Data" />
+<Button layoutX="200.0"
+        layoutY="140.0"
+        mnemonicParsing="false"
+        text="Adicionar Despesa"
+        onAction="#adicionarDespesa"/>
 
-                <TableColumn prefWidth="120.0"
-                             text="Tipo" />
+<Label fx:id="labelSaldo"
+       layoutX="30.0"
+       layoutY="200.0"
+       style="-fx-font-size: 20px; -fx-font-weight: bold;"
+       text="Saldo Total: R$ 0,00"/>
 
-            </columns>
+<TableView fx:id="tableTransacoes"
+           layoutX="30.0"
+           layoutY="250.0"
+           prefHeight="300.0"
+           prefWidth="740.0">
 
-        </TableView>
+    <columns>
+
+       <TableColumn fx:id="colDescricao"
+             prefWidth="200.0"
+             text="Descrição" />
+
+<TableColumn fx:id="colValor"
+             prefWidth="120.0"
+             text="Valor (R$)" />
+
+<TableColumn fx:id="colCategoria"
+             prefWidth="150.0"
+             text="Categoria" />
+
+<TableColumn fx:id="colData"
+             prefWidth="150.0"
+             text="Data" />
+
+<TableColumn fx:id="colTipo"
+             prefWidth="120.0"
+             text="Tipo" />
+
+           </columns>
+
+      </TableView>
 
     </children>
 
